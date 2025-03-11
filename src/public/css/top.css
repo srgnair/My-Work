@@ -9,35 +9,228 @@
 
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
-    color: #383e45;
+    color: #24292E;
     font-size: 0.9rem;
     background-color: chocolate;
 }
 
 a {
+    color: #24292E;
     text-decoration: none;
     cursor: pointer;
 }
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 li {
     list-style: none;
 }
 
+header, .about, .works, .news, .contact-form, footer p{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.about h2, .works h2, .news h2, .contact-form h2 {
+    text-align: center;
+}
+
 /* ヘッダー */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px auto;
+}
 
 .header__logo{
     margin: 0;
+    max-width: 120px;
+}
+
+.header__logo img{
+    object-fit: cover;
+    object-position: center;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+}
+
+header li{
+    font-size: 0.875rem;
+    padding-left: 30px;
+}
+
+header li:first-child{
+    padding-left: 0;
+}
+
+header li:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+/* メインビジュアル */
+
+.main-visual img{
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* about */
+
+.about{
+    margin-bottom: 130px;
+}
+
+.about h2{
+    margin: 80px auto 65px;
+}
+
+.about p, .about dl{
+    margin-bottom: 30px;
+}
+
+.about p:last-child{
+    margin-bottom: 0;
+}
+
+/* works */
+
+.works{
+    margin-bottom: 150px;
+}
+
+.works h2{
+    margin-bottom: 68px;
+}
+
+.work__images ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.work__images li{
+    width: calc(33.33% - 20px);
+}
+
+/* news */
+
+.news{
+    margin-bottom: 130px;
+}
+
+.news h2{
+    margin-bottom: 65px;
+}
+
+.news__item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    align-items: flex-start;
+    border-bottom: 1px #c8c8c8 solid;
+}
+
+.news__item dt{
+    margin-right: 78px;
+}
+
+.news__item dt, .news__item dd{
+    padding: 15px;
+}
+
+/* contact-form */
+
+.contact-form{
+    margin-bottom: 152px;
+}
+
+.contact-form h2{
+    margin-bottom: 65px;
+}
+
+.contact-form form{
+    width: 100%;
+}
+
+.contact-form__group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.contact-form__group label{
+    width: 10%;
+}
+
+.contact-form__group input, .contact-form__group textarea{
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.contact-form__group textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form__button{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-form__button button{
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    background-color: #24292E;
+    padding: 15px 85px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s
+}
+
+.contact-form__button button:hover{
+    color: #24292E;
+    background-color: #fff;
+}
+
+
+/* footer */
+
+footer{
+    text-align: center;
+}
+
+footer p{
+    padding: 10px 0;
 }
 
 
 /* デバッグ用 */
+
+.news__item:first-child{
+    border-top: 1px #c8c8c8 solid;
+}
 
 header {
     background-color: honeydew;
@@ -57,6 +250,10 @@ header {
 
 .contact-form{
     background-color: honeydew;
+}
+
+.contact-form__group label{
+    background-color: coral;
 }
 
 footer{

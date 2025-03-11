@@ -7,6 +7,7 @@
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="{{ asset('css/top.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    <script src="https://kit.fontawesome.com/ada21263c2.js" crossorigin="anonymous"></script>
     <title>My Work</title>
 </head>
 <body>
@@ -17,12 +18,11 @@
     </h1>
     <nav>
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">■</a></li>
-            <!-- インスタのアイコン -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
     </nav>
 </header>
@@ -32,7 +32,7 @@
         <img src="{{ asset('images/mainvisual-pc.jpg') }}" alt="メインビジュアル">
     </div>
 
-    <section class="about">
+    <section class="about" id="about">
         <h2>About</h2>
         <p>Xxxxx Ashley</p>
         <dl>
@@ -46,35 +46,47 @@
         <p>プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
     </section>
 
-    <section class="works">
+    <section class="works" id="works">
         <h2>Works</h2>
         <div class="work__images">
-            <img src="{{ asset('images/works1.jpg') }}" alt="イメージ画像">
-            <img src="{{ asset('images/works2.jpg') }}" alt="イメージ画像">
-            <img src="{{ asset('images/works3.jpg') }}" alt="イメージ画像">
-            <img src="{{ asset('images/works4.jpg') }}" alt="イメージ画像">
-            <img src="{{ asset('images/works5.jpg') }}" alt="イメージ画像">
-            <img src="{{ asset('images/works6.jpg') }}" alt="イメージ画像">
+            <ul>
+                <li><img src="{{ asset('images/works1.jpg') }}" alt="イメージ画像"></li>
+                <li><img src="{{ asset('images/works2.jpg') }}" alt="イメージ画像"></li>
+                <li><img src="{{ asset('images/works3.jpg') }}" alt="イメージ画像"></li>
+                <li><img src="{{ asset('images/works4.jpg') }}" alt="イメージ画像"></li>
+                <li><img src="{{ asset('images/works5.jpg') }}" alt="イメージ画像"></li>
+                <li><img src="{{ asset('images/works6.jpg') }}" alt="イメージ画像"></li>
+            </ul>
         </div>
     </section>
 
-    <section class="news">
+    <section class="news" id="news">
         <h2>News</h2>
         <dl>
-            <dt>2020.XX.XX</dt>
-            <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</dd>
-            <dt>2020.XX.XX</dt>
-            <dd>ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。</dd>
-            <dt>2019.XX.XX</dt>
-            <dd>【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
-            <dt>2019.XX.XX</dt>
-            <dd></dd>
-            <dt>2019.XX.XX</dt>
-            <dd>【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+            <div class="news__item">
+                <dt>2020.XX.XX</dt>
+                <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</dd>
+            </div>
+            <div class="news__item">
+                <dt>2020.XX.XX</dt>
+                <dd>ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。</dd>
+            </div>
+            <div class="news__item">
+                <dt>2019.XX.XX</dt>
+                <dd>【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+            </div>
+            <div class="news__item">
+                <dt>2019.XX.XX</dt>
+                <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.10』に掲載していただきました。</dd>
+            </div>
+            <div class="news__item">
+                <dt>2019.XX.XX</dt>
+                <dd>【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+            </div>
         </dl>
     </section>
 
-    <section class="contact-form">
+    <section class="contact-form" id="contact">
         <h2>Contact</h2>
         <form action="#">
             <div class="contact-form__group">
@@ -89,7 +101,9 @@
                 <label for="message">MESSAGE</label>
                 <textarea name="message" id="message" required></textarea>
             </div>
-            <button type="submit">送信</button>
+            <div class="contact-form__button">
+                <button type="submit">送信</button>
+            </div>
         </form>
     </section>
 </main>
