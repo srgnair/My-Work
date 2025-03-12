@@ -29,7 +29,10 @@
 
 <main>
     <div class="main-visual">
+    <picture>
+        <source media="(max-width: 600px)" srcset="{{ asset('images/mainvisual-sp.jpg') }}">
         <img src="{{ asset('images/mainvisual-pc.jpg') }}" alt="メインビジュアル">
+    </picture>
     </div>
 
     <section class="about" id="about">

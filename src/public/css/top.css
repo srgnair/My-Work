@@ -15,7 +15,6 @@ html {
 body {
     color: #24292E;
     font-size: 0.9rem;
-    background-color: chocolate;
 }
 
 a {
@@ -25,7 +24,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
 
@@ -84,10 +83,17 @@ header li:hover{
 
 /* メインビジュアル */
 
-.main-visual img{
+.main-visual{
+    width: 100%;
     height: 420px;
+}
+
+.main-visual img{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
 }
 
 
@@ -143,7 +149,6 @@ header li:hover{
 .news__item{
     display: flex;
     flex-wrap: wrap;
-    gap: 0px;
     align-items: flex-start;
     border-bottom: 1px #c8c8c8 solid;
 }
@@ -226,36 +231,69 @@ footer p{
 }
 
 
-/* デバッグ用 */
+@media (max-width: 600px) {
 
-.news__item:first-child{
-    border-top: 1px #c8c8c8 solid;
-}
+    header, .about, .works, .news,.contact-form{
+        padding: 0 15px;
+    }
 
-header {
-    background-color: honeydew;
-}
+    .about h2,
+    .works h2,
+    .news h2,
+    .contact-form h2 {
+        margin-bottom: 40px;
+    }
 
-.about{
-    background-color: bisque;
-}
+    header{
+        flex-direction: column;
+        margin: 20px auto 10px;
+    }
 
-.works{
-    background-color: honeydew;
-}
+    .about{
+        margin-bottom: 70px;
+    }
 
-.news{
-    background-color: bisque;
-}
+    .works{
+        margin-bottom: 90px;
+    }
 
-.contact-form{
-    background-color: honeydew;
-}
+    .work__images ul{
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
-.contact-form__group label{
-    background-color: coral;
-}
+    .work__images li{
+        width: 100%;
+    }
 
-footer{
-    background-color: bisque;
+    .news{
+        margin-bottom: 70px;
+    }
+
+    .news__item {
+        flex-direction: column;
+    }
+
+    .news__item dt{
+        padding: 15px 0 0;
+    }
+
+    .news__item dd{
+        padding: 0 0 15px;
+    }
+
+    .contact-form {
+        margin-bottom: 70px;
+    }
+
+    .contact-form__group{
+        flex-direction: column;
+    }
+
+    .contact-form__group label,
+    .contact-form__group input,
+    .contact-form__group textarea {
+        width: 100%;
+    }
 }
