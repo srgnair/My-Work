@@ -54,5 +54,11 @@ HTML/CSSの学習を目的として、デザインカンプを元にコーディ
 
 ## スクリーンショット
 
-![Image](https://github.com/user-attachments/assets/058d4d9a-17ab-47ff-8c08-abfe51b079e7)
+1.PC版
+
+![Image](https://github.com/user-attachments/assets/e8dca434-1fb5-4c83-97e1-5a6222fa3c29)
+
+2.レスポンシブ版(ブレークポイント600px)<br>
+
+<img src="https://github.com/user-attachments/assets/1ed19346-a307-4440-a417-89577d7b66b6" width="300px">
 
